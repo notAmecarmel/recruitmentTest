@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Solar Design Input Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #f5f5f5;
+      border-radius: 10px;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    label {
+      font-weight: bold;
+      margin-top: 10px;
+      display: block;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 4px;
+      margin-bottom: 12px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .button {
+      width: 100%;
+      background-color: #007bff;
+      color: white;
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    pre {
+      background-color: #222;
+      color: #0f0;
+      padding: 15px;
+      border-radius: 5px;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Solar Design Input Form</h2>
+
+  <form id="solarForm">
+    <label for="name">Project Name</label>
+    <input type="text" id="name" required>
+
+    <label for="userId">User ID</label>
+    <input type="text" id="userId" required>
+
+    <label for="objectId">Object ID</label>
+    <input type="text" id="objectId" value="obj1" required>
+
+    <label for="type">Object Type</label>
+    <input type="text" id="type" value="panel" required>
+
+    <label>Position (X, Y, Z)</label>
+    <input type="number" id="posX" placeholder="X" required>
+    <input type="number" id="posY" placeholder="Y" required>
+    <input type="number" id="posZ" placeholder="Z" required>
+
+    <label>Rotation (X°, Y°, Z°)</label>
+    <input type="number" id="rotX" placeholder="X" required>
+    <input type="number" id="rotY" placeholder="Y" required>
+    <input type="number" id="rotZ" placeholder="Z" required>
+
+    <button class="button" type="submit">Generate JSON</button>
+  </form>
+
+  <h3>Output JSON:</h3>
+  <pre id="output"></pre>
+
+  <script>
+    document.getElementById('solarForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const data = {
+        name: document.getElementById('name').value,
+        userId: document.getElementById('userId').value,
+        scene: {
+          objects: [
+            {
+              id: document.getElementById('objectId').value,
+              type: document.getElementById('type').value,
+              position: [
+                parseFloat(document.getElementById('posX').value),
+                parseFloat(document.getElementById('posY').value),
+                parseFloat(document.getElementById('posZ').value)
+              ],
+              rotation: [
+                parseFloat(document.getElementById('rotX').value),
+                parseFloat(document.getElementById('rotY').value),
+                parseFloat(document.getElementById('rotZ').value)
+              ]
+            }
+          ]
+        }
+      };
+
+      document.getElementById('output').textContent = JSON.stringify(data, null, 2);
+    });
+  </script>
+
+</body>
+</html>
