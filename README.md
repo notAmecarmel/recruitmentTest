@@ -1,5 +1,5 @@
 
-# 🌞 Full Stack Assignment: Rooftop Solar Project Form
+# 🌞 Back-End Assignment: Rooftop Solar Project Form
 
 ## 📌 Assignment Overview
 
