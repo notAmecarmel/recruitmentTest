@@ -9,7 +9,7 @@ This assignment is designed to evaluate your backend and full-stack development 
 
 ## 🎯 Objectives
 
-- Build a frontend form that collects project data  
+- Build a frontend form that collects project data  (done)
 - Submit the form to a backend API  
 - Store data in a database in the given JSON format  
 - Retrieve and display projects by `userId`
@@ -41,7 +41,7 @@ All submissions must be stored in the following JSON structure:
 
 ## 🧩 Requirements
 
-### 🔸 Frontend
+### 🔸 Frontend (done)
 
 * A simple form to input:
 
@@ -67,7 +67,7 @@ All submissions must be stored in the following JSON structure:
 
 ## 💾 Suggested Tech Stack
 
-* **Frontend**: HTML + JS (or any frontend framework of your choice)
+* **Frontend**: HTML + JS (done)
 * **Backend**: Node.js + Express (or any language/framework you're comfortable with)
 * **Database**: MongoDB, Firebase, or PostgreSQL
 
@@ -116,7 +116,7 @@ solar-form-app/
 
 ## ⏱ Deadline
 
-Complete the assignment within **3 days** from the date of assignment.
+Will be given personally to you.
 
 ---
 
@@ -124,5 +124,4 @@ Good luck! 🚀
 
 ```
 
-Let me know if you'd like a `.zip` version or want this deployed to GitHub as a starter repo.
-```
+
