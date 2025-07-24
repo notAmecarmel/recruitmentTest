@@ -1,3 +1,4 @@
+
 # 🌞 Full Stack Assignment: Rooftop Solar Project Form
 
 ## 📌 Assignment Overview
@@ -8,9 +9,9 @@ This assignment is designed to evaluate your backend and full-stack development 
 
 ## 🎯 Objectives
 
-- Build a frontend form that collects project data
-- Submit the form to a backend API
-- Store data in a database in the given JSON format
+- Build a frontend form that collects project data  
+- Submit the form to a backend API  
+- Store data in a database in the given JSON format  
 - Retrieve and display projects by `userId`
 
 ---
@@ -34,63 +35,94 @@ All submissions must be stored in the following JSON structure:
     ]
   }
 }
+````
 
-'''
+---
 
-🧩 Requirements
-🔸 Frontend
-A simple form to input:
+## 🧩 Requirements
 
-name (Project Name)
+### 🔸 Frontend
 
-userId
+* A simple form to input:
 
-One or more objects in a scene:
+  * `name` (Project Name)
+  * `userId`
+  * One or more objects in a scene:
 
-id
+    * `id`
+    * `type`
+    * `position` (x, y, z)
+    * `rotation` (x, y, z)
+* Submit button that sends the data to a backend `POST` endpoint
+* Input field to enter a `userId` and button to fetch & display their projects
 
-type
+### 🔸 Backend
 
-position (x, y, z)
+* A REST API with:
 
-rotation (x, y, z)
+  * `POST /submit`: Accepts project data and stores it in the database
+  * `GET /projects/:userId`: Returns all projects for the given `userId`
 
-Submit button that sends the data to a backend POST endpoint
+---
 
-Input field to enter a userId and button to fetch & display their projects
+## 💾 Suggested Tech Stack
 
-🔸 Backend
-A REST API with:
+* **Frontend**: HTML + JS (or any frontend framework of your choice)
+* **Backend**: Node.js + Express (or any language/framework you're comfortable with)
+* **Database**: MongoDB, Firebase, or PostgreSQL
 
-POST /submit: Accepts project data and stores it in the database
+---
 
-GET /projects/:userId: Returns all projects for the given userId
+## ✅ What We’re Looking For
 
-💾 Suggested Tech Stack
-Frontend: HTML + JS (or any frontend framework of your choice)
+* Can you structure and validate the input data correctly?
+* Can you create and connect the frontend to backend APIs?
+* Can you save and retrieve data from the database?
+* Can you organize your code in a clean, modular, and readable way?
+* Can you use Git and GitHub correctly?
 
-Backend: Node.js + Express (or any language/framework you're comfortable with)
+---
 
-Database: MongoDB, Firebase, or PostgreSQL
+## 🚀 Extra Credit (Optional)
 
-✅ What We’re Looking For
-Can you structure and validate the input data correctly?
+* Form validation
+* UI improvements
+* Hosted demo
+* Bonus endpoints (e.g., delete project, edit project)
+* Search/filter feature
 
-Can you create and connect the frontend to backend APIs?
+---
 
-Can you save and retrieve data from the database?
+## 📁 Project Structure (Recommended)
 
-Can you organize your code in a clean, modular, and readable way?
+```bash
+solar-form-app/
+├── client/        # Frontend code (form, scripts)
+├── server/        # Backend API and DB connection
+├── README.md
+└── .gitignore
+```
 
-Can you use Git and GitHub correctly?
+---
 
-🚀 Extra Credit (Optional)
-Form validation
+## 🧪 Submission Instructions
 
-UI improvements
+1. Fork this repository or create your own public GitHub repo
+2. Push your code regularly and write meaningful commit messages
+3. Include clear instructions in your repo on how to run the app
+4. Submit the GitHub link when done
 
-Hosted demo
+---
 
-Bonus endpoints (e.g., delete project, edit project)
+## ⏱ Deadline
 
-Search/filter feature
+Complete the assignment within **3 days** from the date of assignment.
+
+---
+
+Good luck! 🚀
+
+```
+
+Let me know if you'd like a `.zip` version or want this deployed to GitHub as a starter repo.
+```
